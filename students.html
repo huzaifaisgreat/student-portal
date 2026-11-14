@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Students · Student Portal{% endblock %}
+{% block content %}
+<div class="row-between">
+  <h1>Students</h1>
+  <div>
+    <a class="btn" href="{{ url_for('export_csv') }}">Export CSV</a>
+    <a class="btn primary" href="{{ url_for('add_student') }}">+ Add student</a>
+  </div>
+</div>
+
+<form class="search" method="get">
+  <input name="q" value="{{ query }}" placeholder="Search…">
+  <select name="field">
+    {% for f in fields %}
+    <option value="{{ f }}" {{ 'selected' if f == field }}>{{ f.replace('_', ' ').title() }}</option>
+    {% endfor %}
+  </select>
+  <button class="btn" type="submit">Search</button>
+</form>
+
+<div class="card table-wrap">
+  <table>
+    <thead>
+      <tr><th>Roll no</th><th>Name</th><th>Department</th><th>Sem</th><th>Marks</th><th>Grade</th><th></th></tr>
+    </thead>
+    <tbody>
+      {% for r in records %}
+      <tr>
+        <td>{{ r.roll_no }}</td>
+        <td>{{ r.name }}</td>
+        <td>{{ r.department }}</td>
+        <td>{{ r.semester }}</td>
+        <td>{{ r.marks }}</td>
+        <td><span class="grade g-{{ r.grade }}">{{ r.grade }}</span></td>
+        <td class="row-actions">
+          <a href="{{ url_for('edit_student', roll_no=r.roll_no) }}">Edit</a>
+          <form method="post" action="{{ url_for('delete_student', roll_no=r.roll_no) }}"
+                onsubmit="return confirm('Delete {{ r.name }}?');">
+            <button class="link danger" type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="7" class="muted center">No students found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

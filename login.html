@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Sign in · Student Portal{% endblock %}
+{% block content %}
+<div class="login-card card">
+  <h1>Student Portal</h1>
+  <p class="muted">Sign in to manage student records.</p>
+  <form method="post">
+    <label>Username
+      <input name="username" autocomplete="username" required autofocus>
+    </label>
+    <label>Password
+      <input name="password" type="password" autocomplete="current-password" required>
+    </label>
+    <button class="btn primary" type="submit">Sign in</button>
+  </form>
+</div>
+{% endblock %}

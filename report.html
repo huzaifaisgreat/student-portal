@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Report · Student Portal{% endblock %}
+{% block content %}
+<h1>Performance report</h1>
+{% if report.total == 0 %}
+<p class="muted">No data yet. Add students to generate a report.</p>
+{% else %}
+<div class="grid-2">
+  <div class="card">
+    <h2>Grade distribution</h2>
+    {% for grade, count in report.grades.items() %}
+    <div class="bar-row">
+      <span class="grade g-{{ grade }}">{{ grade }}</span>
+      <div class="bar"><div class="fill g-{{ grade }}" style="width: {{ (count / report.total * 100)|round(1) }}%"></div></div>
+      <span class="count">{{ count }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="card">
+    <h2>Average by department</h2>
+    {% for dept, info in report.by_department.items() %}
+    <div class="bar-row wide">
+      <span class="label">{{ dept }}</span>
+      <div class="bar"><div class="fill" style="width: {{ info.average }}%"></div></div>
+      <span class="count">{{ info.average }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="card">
+  <h2>Highlights</h2>
+  <ul class="plain">
+    <li><strong>Students:</strong> {{ report.total }} · <strong>Average:</strong> {{ report.average }} · <strong>Pass rate:</strong> {{ report.pass_rate }}%</li>
+    <li><strong>Highest:</strong> {{ report.highest.name }} ({{ report.highest.marks }})</li>
+    <li><strong>Lowest:</strong> {{ report.lowest.name }} ({{ report.lowest.marks }})</li>
+  </ul>
+</div>
+{% endif %}
+{% endblock %}
