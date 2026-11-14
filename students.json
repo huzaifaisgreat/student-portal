@@ -1,0 +1,98 @@
+[
+  {
+    "roll_no": "25L-5308",
+    "name": "Ayesha Khan",
+    "department": "Computer Science",
+    "semester": 3,
+    "marks": 88.0,
+    "grade": "A"
+  },
+  {
+    "roll_no": "25L-5291",
+    "name": "Bilal Ahmed",
+    "department": "Computer Science",
+    "semester": 3,
+    "marks": 72.5,
+    "grade": "B"
+  },
+  {
+    "roll_no": "25L-5101",
+    "name": "Sara Malik",
+    "department": "Software Engineering",
+    "semester": 2,
+    "marks": 91.0,
+    "grade": "A"
+  },
+  {
+    "roll_no": "25L-5112",
+    "name": "Hamza Tariq",
+    "department": "Software Engineering",
+    "semester": 2,
+    "marks": 64.0,
+    "grade": "C"
+  },
+  {
+    "roll_no": "25L-5127",
+    "name": "Maryam Iqbal",
+    "department": "Electrical Engineering",
+    "semester": 4,
+    "marks": 79.0,
+    "grade": "B"
+  },
+  {
+    "roll_no": "25L-5133",
+    "name": "Usman Raza",
+    "department": "Electrical Engineering",
+    "semester": 4,
+    "marks": 48.0,
+    "grade": "D"
+  },
+  {
+    "roll_no": "25L-5148",
+    "name": "Zainab Fatima",
+    "department": "Business Administration",
+    "semester": 1,
+    "marks": 83.0,
+    "grade": "B"
+  },
+  {
+    "roll_no": "25L-5160",
+    "name": "Ali Hassan",
+    "department": "Business Administration",
+    "semester": 1,
+    "marks": 36.0,
+    "grade": "F"
+  },
+  {
+    "roll_no": "25L-5172",
+    "name": "Hira Noor",
+    "department": "Law",
+    "semester": 5,
+    "marks": 95.0,
+    "grade": "A"
+  },
+  {
+    "roll_no": "25L-5185",
+    "name": "Fahad Siddiqui",
+    "department": "Law",
+    "semester": 5,
+    "marks": 58.0,
+    "grade": "C"
+  },
+  {
+    "roll_no": "25L-5190",
+    "name": "Noor Ul Ain",
+    "department": "Computer Science",
+    "semester": 6,
+    "marks": 76.0,
+    "grade": "B"
+  },
+  {
+    "roll_no": "25L-5204",
+    "name": "Daniyal Shah",
+    "department": "Software Engineering",
+    "semester": 6,
+    "marks": 69.0,
+    "grade": "C"
+  }
+]
